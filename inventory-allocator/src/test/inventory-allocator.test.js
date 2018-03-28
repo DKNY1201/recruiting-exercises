@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 const inventoryAllocator = require("../app/inventory-allocator");
 
-describe("inventory-allocator.js", function () {
+describe("inventory-allocator.test.js", function () {
     it("should allocate for an order with one item and one warehouse - enough items", function () {
         const warehouse = inventoryAllocator.getBestWarehouses({apple: 1}, [{name: 'owd', inventory: {apple: 1}}]);
         expect(warehouse).to.deep.equal([{owd: {apple: 1}}]);
